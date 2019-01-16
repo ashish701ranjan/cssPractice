@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .individualDropDowns{
+                border: solid;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: aqua;
+                min-width: 200px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+                padding: 12px 16px;
+                z-index: 1;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-btn {
+                position: relative;
+                display: inline-block;
+                background-color: green;
+            }
+            .dropdown-btn ~ ul {
+                display: none;
+                position: absolute;
+                padding: 0;
+                list-style-type: none;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+                border: solid;
+                z-index: 1;
+            }
+            .dropdown2:hover ul{
+                display: block;
+            }
+            .dropdown2 ul > li {
+                color: coral;
+                background-color: aqua;
+                border-bottom: solid;
+                text-decoration: none;
+            }
+            .dropdown2 ul > li:last-child {
+                border-bottom: none;
+            }
+            .dropdown-btn:hover ~ ul > li:hover {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="individualDropDowns">
+            <h2>Hoverable Dropdown</h2>
+            <div class="dropdown">
+                <span>Mouse over me</span>
+                <div class="dropdown-content">
+                    <p>Hello World!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="individualDropDowns">
+            <h2>Hover Over button</h2>
+            <div class="dropdown2">
+                <button class="dropdown-btn">
+                    Hover Me!
+                </button>
+                <ul>
+                    <li>Option1</li>
+                    <li>Option2</li>
+                    <li>Option3</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
